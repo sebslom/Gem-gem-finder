@@ -1,0 +1,6 @@
+Godot Engine v4.6.stable.mono.official.89cea1439 - https://godotengine.org
+
+SCRIPT ERROR: Invalid call. Nonexistent function 'max' in base 'PackedByteArray'.
+   at: run (res://tests/run.gd:63)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/run.gd:63)
