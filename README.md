@@ -5,6 +5,14 @@ I share code and godot project ready to open in godot or run as stanalone build 
 
 Gem Finder is a browser-playable 2D sandbox adventure built with Godot 4.6 and GDScript. Land on an alien planet, mine into procedural caves, collect resources, craft upgrades, automate extraction, awaken the Core, and prepare a spacecraft for the next world. The project draws inspiration from the exploration, progression, and automation loops of games like *Terraria* and *Core Keeper*, featuring its own custom art direction and systems.
 
+## Gallery
+
+<img width="24%" alt="4" src="https://github.com/user-attachments/assets/fb84814a-7403-4624-96ce-b37d2954efa9" />
+<img width="24%" alt="3" src="https://github.com/user-attachments/assets/ba221508-85de-4787-96d9-4f745b0a2d52" />
+<img width="24%" alt="2" src="https://github.com/user-attachments/assets/58c4fc9f-bd54-4fea-88e6-2f3eb7fb63a5" />
+<img width="24%" alt="1" src="https://github.com/user-attachments/assets/f096c1dc-2f29-4687-b66b-c9754c459883" />
+
+
 ## Features
 
 **Core Gameplay**
