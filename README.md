@@ -1,5 +1,7 @@
-# Gem Finder
+# Gem Finder Finder
 ![Godot Version](https://img.shields.io/badge/Godot-4.6-blue) ![Status](https://img.shields.io/badge/Status-Prototype-green) ![License](https://img.shields.io/badge/License-MIT-orange)
+
+I share code and godot project ready to open in godot or run as stanalone build project from itch.io.
 
 Gem Finder is a browser-playable 2D sandbox adventure built with Godot 4.6 and GDScript. Land on an alien planet, mine into procedural caves, collect resources, craft upgrades, automate extraction, awaken the Core, and prepare a spacecraft for the next world. The project draws inspiration from the exploration, progression, and automation loops of games like *Terraria* and *Core Keeper*, featuring its own custom art direction and systems.
 
@@ -55,19 +57,8 @@ Download play ready build:
 Building & Running Locally
 Gem Finder requires the standard Godot 4.6 editor (non-.NET version) for Web export.
 
-1. Build the Web Export
-```
-python tools/fetch_web_template.py
-python tools/fetch_web_template.py --engine
-.\tools\templates\Godot_v4.6-stable_win64_console.exe --headless --path . --export-release Web build/web/index.html
-```
-2. Serve the Game
-Host the exported build/web directory through a local HTTP server:
-```
-python -m http.server 8066 --bind 127.0.0.1 --directory build/web
-```
 Development Status
-Gem Finder is an in-development prototype. While the single-player sandbox loop is fully playable, a production multiplayer release still requires a deployed authoritative WebSocket server, server-side world validation, account/session handling, moderation tools, rate limits, and secure WSS hosting.
+Gem Finder Finder is an in-development prototype. While the single-player sandbox loop is fully playable, a production multiplayer release still requires a deployed authoritative WebSocket server, server-side world validation, account/session handling, moderation tools, rate limits, and secure WSS hosting.
 
 AI Assistance
 This project was developed with assistance from GPT-6 Astra. The AI acted as a development collaborator for planning, code iteration, debugging, documentation, and prototype implementation. The creator remains responsible for reviewing, testing, and shipping the project.
