@@ -1,9 +1,18 @@
 # Gem Finder
 ![Godot Version](https://img.shields.io/badge/Godot-4.6-blue) ![Status](https://img.shields.io/badge/Status-Prototype-green) ![License](https://img.shields.io/badge/License-MIT-orange)
 
-## Link to game ready to play in browser:
+<h3>Link to game ready to play in browser:</h3>
 <br>https://sebslo.itch.io/gem-finder-finder
 <br>
+
+It's a repository ready to open in godot 4.6 as project.
+
+<img width="20%"  alt="5" src="https://github.com/user-attachments/assets/e0a23522-e4b5-41e3-8404-8aa9c493a99a" />
+<img width="20%" alt="4" src="https://github.com/user-attachments/assets/f726dc19-8259-40e3-ab6b-807f829ab4d2" />
+<img width="20%" alt="3" src="https://github.com/user-attachments/assets/c35bfe4e-246a-4e26-be56-85264e94da94" />
+<img width="20%" alt="2" src="https://github.com/user-attachments/assets/fd1ee5b0-e1d4-4b4a-9e69-5c99866ec246" />
+<img width="20%"  alt="1" src="https://github.com/user-attachments/assets/731e0ea4-c175-49d7-9a84-27da851d71c7" />
+
 
 Gem Finder is a browser-playable 2D sandbox adventure built with Godot 4.6 and GDScript. Land on an alien planet, mine into procedural caves, collect resources, craft upgrades, automate extraction, awaken the Core, and prepare a spacecraft for the next world. The project draws inspiration from the exploration, progression, and automation loops of games like *Terraria* and *Core Keeper*, featuring its own custom art direction and systems.
 
