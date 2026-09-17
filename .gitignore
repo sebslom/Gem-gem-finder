@@ -1,0 +1,7 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+/build/
+/tools/templates/
+/tests/save-fixture/
+/*.log
