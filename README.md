@@ -1,60 +1,53 @@
 # Gem Finder
+![Godot Version](https://img.shields.io/badge/Godot-4.6-blue) ![Status](https://img.shields.io/badge/Status-Prototype-green) ![License](https://img.shields.io/badge/License-MIT-orange)
 
-A playable Godot 4.6 **GDScript** sandbox prototype that exports to a browser using WebAssembly and WebGL 2. It uses the standard Godot editor, Compatibility rendering, and the **nothreads** web template. No .NET runtime, extensions, external assets, API keys, or cross-origin isolation headers are required.
+## Link to game ready to play in browser:
+<br>https://sebslo.itch.io/gem-finder-finder
+<br>
 
-## Play
+Gem Finder is a browser-playable 2D sandbox adventure built with Godot 4.6 and GDScript. Land on an alien planet, mine into procedural caves, collect resources, craft upgrades, automate extraction, awaken the Core, and prepare a spacecraft for the next world. The project draws inspiration from the exploration, progression, and automation loops of games like *Terraria* and *Core Keeper*, featuring its own custom art direction and systems.
 
-The exported game is in `build/web/index.html`. Serve the **whole folder** over HTTP; opening the HTML as a local file will not work.
+## Features
 
-```powershell
-python -m http.server 8066 --bind 127.0.0.1 --directory build/web
-```
+**Core Gameplay**
+- Procedural, seeded planets with persistent terrain changes.
+- Varied biomes including forest-surface landing zones, underground caverns, caves, ore veins, and water.
+- Mining, block placement, item drops, crafting, tool tiers, and progression gates.
+- Action mechanics: grappling hook, combat, slimes, health/energy management, and exploration fog.
+- Automation systems: conveyors, generators, wires, and automatic drills.
 
-Open <http://127.0.0.1:8066>. The current UI targets desktop browsers with a keyboard and mouse. Touch controls, gamepad support and mobile layout are not implemented.
+**Technology & Interface**
+- Browser build utilizing WebAssembly and WebGL 2.
+- Local browser saves with checkpoint recovery.
+- Custom tile collision and responsive platform movement.
+- Compact pixel-art HUD, hotbar, pause menu, settings, character selection, and star chart.
 
-| Input | Action |
-| --- | --- |
-| A/D or left/right | Move |
-| Space, W or up | Jump; release early for a shorter jump; swim |
-| 1–9 or mouse wheel | Select tool or building item |
-| Left mouse | Mine, attack with blade, or place selected item |
-| Right mouse | Place selected building item; earth when a tool is selected |
-| Q | Grapple to the aimed solid block; press again to release |
-| C | Crafting menu; advanced recipes require a nearby workbench |
-| E | Offer five crystals to the Core while nearby |
-| M | Star chart; travel after crafting a spacecraft |
-| Escape | Pause / resume |
+## Controls
 
-Mine the copper deposits in the landing chamber floor. Collect earth and stone, craft and place a workbench, then craft a copper pickaxe. Descend through the clay barrier for iron and crystals. A crystal pickaxe opens the obsidian boundary. Craft a spacecraft to visit six deterministic planets; terrain changes remain when revisiting them. Slimes also drop crystals. Save from the pause menu; an automatic checkpoint runs after 90 seconds of active play.
+| Key / Input | Action |
+| :--- | :--- |
+| **A / D** or **Left / Right** | Move |
+| **Space / W / Up** | Jump or swim |
+| **Left Mouse** | Mine, attack, or use selected tool |
+| **Right Mouse** | Place selected building item |
+| **1–9 / Mouse Wheel** | Select hotbar item |
+| **Q** | Grapple / Release grapple |
+| **C** | Open Crafting |
+| **E** | Interact with the Core |
+| **M** | Star chart |
+| **Enter** | Open chat |
+| **Escape** | Pause or return |
 
-## Rebuild
+## Multiplayer & Admin Commands
 
-Use **standard Godot 4.6**, not the .NET editor. Godot's .NET editor refuses Web exports even when the project contains only GDScript.
+The multiplayer interface is built as a foundation for WebSocket-based shared worlds. Server operators can authenticate as admins and utilize the following commands:
 
-The helper retrieves the official release archive using HTTP ranges and downloads only the required web templates. `--engine` also retrieves the matching standard Windows editor. ZIP CRCs are verified during extraction.
-
-```powershell
-python tools/fetch_web_template.py
-python tools/fetch_web_template.py --engine
-.\tools\templates\Godot_v4.6-stable_win64_console.exe --headless --path . --export-release Web build/web/index.html
-```
-
-The Web preset references `tools/templates/web_nothreads_debug.zip` and `web_nothreads_release.zip`. The similarly named `web_release.zip` is threaded and must not be substituted. Downloaded binaries and exports are ignored by Git.
-
-Upload the contents of `build/web` together to an HTTPS static host. Serve `.wasm` as `application/wasm`; enable gzip or Brotli on the host to reduce the initial download. This project has not been published to an external host.
-
-## Verification
-
-```powershell
-.\tools\templates\Godot_v4.6-stable_win64_console.exe --headless --path . --script res://tests/run.gd
-```
-
-The current suite passes **93 checks**. Tests exercise full-field RLE round trips, malformed streams, repeatable generation, safe spawn and swept collision, cross-chunk fluid conservation, mining and pickup, pool exhaustion, invalid placements, crafting progression, combat line of sight and invulnerability, connected drills, conveyors, planet persistence, ten seconds of integrated simulation, and save restoration with corrupted-checkpoint recovery. Fixtures are written only to `tests/save-fixture`, excluded from export.
-
-## Scope
-
-This is a browser-playable foundation, **not a complete implementation of the ten-part master blueprint**. Implemented: three depth regions, six seeded planets, chunk arrays, custom collision, mining, placement, crafting, grapple, slime combat, pooled drops, local lighting and exploration, water flow, conveyors, connected generator/wire/drill chains, a Core interaction, and browser saves.
-
-Not implemented: multiplayer/server reconciliation, generative AI integration, bosses, NPC housing, containers, multi-tile furniture, fluid pipes/pumps, acid/oil reactions, logic gates, smooth shader lighting, the desert biome, or free-flight space navigation. The star chart performs planet travel. See `docs/browser-architecture.md` for the decisions and remaining work.
-
-Save data uses Godot's `user://` filesystem (IndexedDB on the Web), scoped to the browser profile and site origin. Browser privacy settings or cleared site storage can prevent persistence. Saves pause the simulation for one serialized chunk per frame; this deliberately favors consistent checkpoints over the blueprint's uninterrupted-save requirement. Rendering performance depends on hardware and viewport; locked 60 FPS is not promised.
+```text
+/help
+/players
+/items
+/spawn <item> [amount] [player]
+/god [on|off] [player]
+/fly [on|off] [player]
+/tp <x> <y> [player]
+/tp <player> [player]
