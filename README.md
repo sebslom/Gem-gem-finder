@@ -7,7 +7,7 @@
 
 It's a repository ready to open in godot 4.6 as project.
 
-<img width="20%"  alt="5" src="https://github.com/user-attachments/assets/e0a23522-e4b5-41e3-8404-8aa9c493a99a" />
+<img width="19%"  alt="5" src="https://github.com/user-attachments/assets/e0a23522-e4b5-41e3-8404-8aa9c493a99a" />
 <img width="20%" alt="4" src="https://github.com/user-attachments/assets/f726dc19-8259-40e3-ab6b-807f829ab4d2" />
 <img width="20%" alt="3" src="https://github.com/user-attachments/assets/c35bfe4e-246a-4e26-be56-85264e94da94" />
 <img width="20%" alt="2" src="https://github.com/user-attachments/assets/fd1ee5b0-e1d4-4b4a-9e69-5c99866ec246" />
