@@ -7,11 +7,11 @@
 
 It's a repository ready to open in godot 4.6 as project.
 
-<img width="19%"  alt="5" src="https://github.com/user-attachments/assets/e0a23522-e4b5-41e3-8404-8aa9c493a99a" />
-<img width="20%" alt="4" src="https://github.com/user-attachments/assets/f726dc19-8259-40e3-ab6b-807f829ab4d2" />
-<img width="20%" alt="3" src="https://github.com/user-attachments/assets/c35bfe4e-246a-4e26-be56-85264e94da94" />
-<img width="20%" alt="2" src="https://github.com/user-attachments/assets/fd1ee5b0-e1d4-4b4a-9e69-5c99866ec246" />
-<img width="20%"  alt="1" src="https://github.com/user-attachments/assets/731e0ea4-c175-49d7-9a84-27da851d71c7" />
+
+<img width="25%" alt="4" src="https://github.com/user-attachments/assets/f726dc19-8259-40e3-ab6b-807f829ab4d2" />
+<img width="25%" alt="3" src="https://github.com/user-attachments/assets/c35bfe4e-246a-4e26-be56-85264e94da94" />
+<img width="25%" alt="2" src="https://github.com/user-attachments/assets/fd1ee5b0-e1d4-4b4a-9e69-5c99866ec246" />
+<img width="24%"  alt="1" src="https://github.com/user-attachments/assets/731e0ea4-c175-49d7-9a84-27da851d71c7" />
 
 
 Gem Finder is a browser-playable 2D sandbox adventure built with Godot 4.6 and GDScript. Land on an alien planet, mine into procedural caves, collect resources, craft upgrades, automate extraction, awaken the Core, and prepare a spacecraft for the next world. The project draws inspiration from the exploration, progression, and automation loops of games like *Terraria* and *Core Keeper*, featuring its own custom art direction and systems.
@@ -58,5 +58,14 @@ The multiplayer interface is built as a foundation for WebSocket-based shared wo
 /spawn <item> [amount] [player]
 /god [on|off] [player]
 /fly [on|off] [player]
+```
+Development Status
+Gem Finder is an in-development prototype. While the single-player sandbox loop is fully playable, a production multiplayer release still requires a deployed authoritative WebSocket server, server-side world validation, account/session handling, moderation tools, rate limits, and secure WSS hosting.
+
+AI Assistance
+This project was developed with assistance from GPT-6 Astra. The AI acted as a development collaborator for planning, code iteration, debugging, documentation, and prototype implementation. The creator remains responsible for reviewing, testing, and shipping the project.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 /tp <x> <y> [player]
 /tp <player> [player]
